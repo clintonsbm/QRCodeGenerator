@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QRCodeGen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GcE-xD-AdY">
+                                <rect key="frame" x="16" y="41" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P5Y-QM-gfC">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.82745098039215681" green="0.32941176470588235" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4q6-mY-dkD"/>
+                                    <constraint firstAttribute="height" constant="200" id="WGk-hB-R2v"/>
+                                </constraints>
+                            </imageView>
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="ubU-L2-azN">
+                                <rect key="frame" x="76" y="529" width="223" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="VlT-wh-LPJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="Zbx-Ps-v1p"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.75294117647058822" green="0.22352941176470587" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.82745098039215681" green="0.32941176470588235" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="changeImageViewScale:" destination="BYZ-38-t0r" eventType="valueChanged" id="vfJ-XI-L8F"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dinofauro" translatesAutoresizingMaskIntoConstraints="NO" id="sNv-re-dWM">
+                                <rect key="frame" x="162" y="308" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TZn-Qo-GW3"/>
+                                    <constraint firstAttribute="width" constant="50" id="cwU-Ld-tAN"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cL-En-4KK">
+                                <rect key="frame" x="239" y="96" width="120" height="30"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.61176470588235299" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="fZk-tv-iwg"/>
+                                </constraints>
+                                <state key="normal" title="Generate">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="performButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="355-hR-tCF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="P5Y-QM-gfC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="09E-ea-fLz"/>
+                            <constraint firstItem="GcE-xD-AdY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="2rp-eV-Oeh"/>
+                            <constraint firstItem="P5Y-QM-gfC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3mg-00-pjZ"/>
+                            <constraint firstItem="sNv-re-dWM" firstAttribute="centerY" secondItem="P5Y-QM-gfC" secondAttribute="centerY" id="G7p-u4-6wu"/>
+                            <constraint firstItem="GcE-xD-AdY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KC8-VV-zNc"/>
+                            <constraint firstItem="sNv-re-dWM" firstAttribute="centerX" secondItem="P5Y-QM-gfC" secondAttribute="centerX" id="Ky4-FI-m4b"/>
+                            <constraint firstItem="5cL-En-4KK" firstAttribute="top" secondItem="GcE-xD-AdY" secondAttribute="bottom" constant="25" id="Ty9-Jc-fgz"/>
+                            <constraint firstItem="ubU-L2-azN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZQY-nx-zzT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ubU-L2-azN" secondAttribute="bottom" constant="108" id="eyu-Dm-S3f"/>
+                            <constraint firstItem="5cL-En-4KK" firstAttribute="trailing" secondItem="GcE-xD-AdY" secondAttribute="trailing" id="iFz-Wz-R7J"/>
+                            <constraint firstItem="GcE-xD-AdY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rKp-DE-tz8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnAction" destination="5cL-En-4KK" id="OGu-uO-Rg3"/>
+                        <outlet property="imgQRCode" destination="P5Y-QM-gfC" id="gB1-vp-ZBe"/>
+                        <outlet property="logo" destination="sNv-re-dWM" id="Jc6-Kj-Ty0"/>
+                        <outlet property="slider" destination="ubU-L2-azN" id="qTE-dG-l07"/>
+                        <outlet property="textField" destination="GcE-xD-AdY" id="GpE-xn-iqb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="103.89805097451276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Dinofauro" width="112" height="134"/>
+    </resources>
+</document>
